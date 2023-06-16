@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TheMealDB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css">
+
+    <!-- Favicon Includes -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="navbar navbar-expand-md navbar-light" aria-label="TopNav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="https://www.themealdb.com">
+                        <img src="./images/logo-small.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#topNavigation" aria-controls="topNavigation" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <path stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+                                    d="M4 7h22M4 15h22M4 23h22" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="topNavigation">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./index.html">API</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://forum.kodi.tv/showthread.php?tid=282387">Forum</a>
+                            <a href="https://www.facebook.com/TheDataDB/">
+                                <img src="./images/facebook_icon.png" alt="">
+                            </a>
+                            <a href="https://twitter.com/TheAudioDB">
+                                <img src="./images/twitter_icon.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="search">
+                                <form role="form" action="./index.html" aria-label="">
+                                    <input type="text" name="s" class="search-form" autocomplete="off"
+                                        placeholder=" Search" />
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="feature">
+
+        <div class="container-fluid">
+            <div class="center">
+
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td style="width:20%">
+                                <img src="/images/meal-icon.png" style="max-width: 100%;height: auto;" alt="Plate Left">
+                            </td>
+                            <td>
+                                <h1>Welcome to TheMealDB</h1>
+                                Welcome to TheMealDB: An open, crowd-sourced database of Recipes from around the
+                                world.<br>
+                                We also offer a <a href='/api.php' />free JSON API</a> for anyone wanting to use it,
+                                with additional features for
+                                subscribers.<br>
+
+                                <!-- If you like the site, please consider supporting us on Patreon by clicking the link below...<br>
+                                        <a href="https://www.patreon.com/thedatadb"/><img src="/images/patreon_logo.png" style="width:200px;"><br>-->
+                                <div>
+                                    <table style="width: fit-content; margin: 0 auto;">
+                                        <tbody>
+                                            <tr>
+                                                <td text-align='center' width='100'>
+                                                    <div id="paypal-button-container-P-5A138037KG443451XMHIZ3SY"></div>
+                                                    <script
+                                                        src="https://www.paypal.com/sdk/js?client-id=AfHEVYLvvBE2km3eTSHJwF2A6W2YN3CZE--80QyFC7m92Nob4rcZlpzLj-hfcVQGEyBwQombwraLOaEb&vault=true&intent=subscription"
+                                                        data-sdk-integration-source="button-factory"></script>
+                                                    <script>
+                                                        paypal.Buttons({
+                                                            style: {
+                                                                shape: 'rect',
+                                                                color: 'gold',
+                                                                layout: 'horizontal',
+                                                                height: 32,
+                                                                width: 45,
+                                                                label: 'subscribe'
+                                                            },
+                                                            createSubscription: function (data, actions) {
+                                                                return actions.subscription.create({
+                                                                    /* Creates the subscription */
+                                                                    plan_id: 'P-05C643823H4633638MRJ35TI'
+                                                                });
+                                                            },
+                                                            onApprove: function (data, actions) {
+                                                                alert(data.subscriptionID); // You can add optional success message for the subscriber here
+                                                            }
+                                                        }).render('#paypal-button-container-P-5A138037KG443451XMHIZ3SY');
+                                                    </script>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                Click to Support £3 per month (cancel anytime)<br>Currently 76
+                                supporters</a><br><br>
+                            </td>
+                            <td style="width:20%">
+                                <img src="/images/meal-icon.png" style="max-width: 100%;height: auto;"
+                                    alt="Plate Right">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <img src="/images/separator.jpg" style="width: 100%; object-fit: contain"><br>
+
+                <div class="navbar-form middle">
+                    <form action="./browse.php" autocomplete="off">
+                        <div class="input-group">
+                            <input type="text" name="s" class="form-control" autocomplete="off" 
+                                placeholder="Search for a Meal...">
+                            <div class="input-group-btn" style="width: fit-content" >
+                                <button type="submit" class="btn btn-default">
+                                    <!-- <span class="glyphicon glyphicon-search"></span> -->
+                                    <i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <img src="images/icons/meal-icon6.png"> <b>Total Meals: </b> 294<img src="images/transparent.png"
+                    width="10" height="1"><img src="images/icons/meal-icon4.png"> <b>Total Ingredients: </b>574<img
+                    src="images/transparent.png" width="10" height="1"><img src="images/icons/image2.png"> <b>Images:
+                </b>294
+            </div>
+            <img src="/images/separator.jpg" style="width: 100%; object-fit: contain"><br>
+        </div>
+        <div class="container-fluid">
+            <div class="center">
+                <h3> Latest Meals </h3>
+                <div class="row">
+                    <div class="col-md-3"><a href="/meal/53075-Tortang-Talong-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/va668f1683209318.jpg"
+                                width="95%">Tortang
+                            Talong</a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/53074-Grilled-eggplant-with-coconut-milk-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/bopa2i1683209167.jpg"
+                                width="95%">Grilled
+                            eggplant with coconut milk</a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/53073-Eggplant-Adobo-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/y7h0lq1683208991.jpg"
+                                width="95%">Eggplant
+                            Adobo</a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/53072-Crispy-Eggplant-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/c7lzrl1683208757.jpg"
+                                width="95%">Crispy
+                            Eggplant</a><br><br></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><a href="/meal/53071-Beef-Asado-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/pkopc31683207947.jpg" width="95%">Beef
+                            Asado</a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/53070-Beef-Caldereta-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/41cxjh1683207682.jpg" width="95%">Beef
+                            Caldereta</a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/53069-Bistek-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/4pqimk1683207418.jpg"
+                                width="95%">Bistek</a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/53068-Beef-Mechado-Recipe"><img
+                                src="https://www.themealdb.com/images/media/meals/cgl60b1683206581.jpg" width="95%">Beef
+                            Mechado</a><br><br></div>
+                </div>
+                <br><br>
+                <img src="/images/separator.jpg" style="width: 100%; object-fit: contain"><br>
+
+                <h3>Popular Ingredients</h3>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="ingredient.php?c=1">
+                            <figure>
+                                <img src="/images/ingredients/Chicken.png" width="95%">
+                                <figcaption><br>Chicken</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="ingredient.php?c=2">
+                            <figure>
+                                <img src="/images/ingredients/Salmon.png" width="95%">
+                                <figcaption><br>Salmon</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="ingredient.php?c=3">
+                            <figure>
+                                <img src="/images/ingredients/Beef.png" width="95%">
+                                <figcaption><br>Beef</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="ingredient.php?c=4">
+                            <figure>
+                                <img src="/images/ingredients/Pork.png" width="95%">
+                                <figcaption><br>Pork</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <img src="/images/separator.jpg" style="width: 100%; object-fit: contain"><br>
+
+                <h3>Random Meals</h3>
+                <div class="row">
+                    <div class="col-md-3"><a href="/meal/53051-Nasi-lemak-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg"
+                                    width="95%">
+                            </div>Nasi lemak
+                        </a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/52772-Teriyaki-Chicken-Casserole-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"
+                                    width="95%">
+                            </div>Teriyaki Chicken Casserole
+                        </a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/52775-Vegan-Lasagna-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg"
+                                    width="95%">
+                            </div>Vegan Lasagna
+                        </a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/52887-Kedgeree-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg"
+                                    width="95%">
+                            </div>Kedgeree
+                        </a><br><br></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><a href="/meal/52902-Parkin-Cake-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/qxuqtt1511724269.jpg"
+                                    width="95%">
+                            </div>Parkin Cake
+                        </a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/52936-Saltfish-and-Ackee-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/vytypy1511883765.jpg"
+                                    width="95%">
+                            </div>Saltfish and Ackee
+                        </a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/52915-French-Omelette-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/yvpuuy1511797244.jpg"
+                                    width="95%">
+                            </div>French Omelette
+                        </a><br><br></div>
+                    <div class="col-md-3"><a href="/meal/52870-Chickpea-Fajitas-Recipe">
+                            <div><img src="https://www.themealdb.com/images/media/meals/tvtxpq1511464705.jpg"
+                                    width="95%">
+                            </div>Chickpea Fajitas
+                        </a><br><br></div>
+                </div>
+
+                <img src="/images/separator.jpg" style="width: 100%; object-fit: contain"><br>
+
+                <div class="center">
+                    <h3>Random Ingredients</h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="ingredient.php?c=142">
+                                <figure>
+                                    <img src="/images/ingredients/French Lentils.png" width="95%">
+                                    <figcaption><br>French Lentils</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="ingredient.php?c=598">
+                                <figure>
+                                    <img src="/images/ingredients/Herring.png" width="95%">
+                                    <figcaption><br>Herring</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="ingredient.php?c=527">
+                                <figure>
+                                    <img src="/images/ingredients/Wonton Skin.png" width="95%">
+                                    <figcaption><br>Wonton Skin</figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="ingredient.php?c=373">
+                                <figure>
+                                    <img src="/images/ingredients/Sugar Snap Peas.png" width="95%">
+                                    <figcaption><br>Sugar Snap Peas</figcaption>
+                                </figure>
+                            </a>
+                        </div> <br><br>
+                        <img src="/images/separator.jpg" style="width: 100%; object-fit: contain"><br>
+                    </div>
+
+                    <h3> Browse Country </h3>
+
+                    <a href="/browse.php?a=British">
+                        <img src="/images/icons/flags/big/64/gb.png"></a>
+
+                    <a href="/browse.php?a=American">
+                        <img src="/images/icons/flags/big/64/us.png"></a>
+
+                    <a href="/browse.php?a=French">
+                        <img src="/images/icons/flags/big/64/fr.png"></a>
+
+                    <a href="/browse.php?a=Canadian">
+                        <img src="/images/icons/flags/big/64/ca.png"></a>
+
+                    <a href="/browse.php?a=Jamaican">
+                        <img src="/images/icons/flags/big/64/jm.png"></a>
+
+                    <a href="/browse.php?a=Chinese">
+                        <img src="/images/icons/flags/big/64/cn.png"></a>
+
+                    <a href="/browse.php?a=Dutch">
+                        <img src="/images/icons/flags/big/64/nl.png"></a>
+
+                    <a href="/browse.php?a=Egyptian">
+                        <img src="/images/icons/flags/big/64/eg.png"></a>
+
+                    <a href="/browse.php?a=Greek">
+                        <img src="/images/icons/flags/big/64/gr.png"></a>
+
+                    <a href="/browse.php?a=Indian">
+                        <img src="/images/icons/flags/big/64/in.png"></a>
+
+                    <a href="/browse.php?a=Irish">
+                        <img src="/images/icons/flags/big/64/ie.png"></a>
+
+                    <a href="/browse.php?a=Italian">
+                        <img src="/images/icons/flags/big/64/it.png"></a>
+
+                    <a href="/browse.php?a=Japanese">
+                        <img src="/images/icons/flags/big/64/jp.png"></a>
+
+                    <a href="/browse.php?a=Kenyan">
+                        <img src="/images/icons/flags/big/64/kn.png"></a>
+
+                    <a href="/browse.php?a=Malaysian">
+                        <img src="/images/icons/flags/big/64/my.png"></a>
+
+                    <a href="/browse.php?a=Mexican">
+                        <img src="/images/icons/flags/big/64/mx.png"></a>
+
+                    <a href="/browse.php?a=Moroccan">
+                        <img src="/images/icons/flags/big/64/ma.png"></a>
+
+                    <a href="/browse.php?a=Croatian">
+                        <img src="/images/icons/flags/big/64/hr.png"></a>
+
+                    <a href="/browse.php?a=Norwegian">
+                        <img src="/images/icons/flags/big/64/no.png"></a>
+
+                    <a href="/browse.php?a=Portuguese">
+                        <img src="/images/icons/flags/big/64/pt.png"></a>
+
+                    <a href="/browse.php?a=Russian">
+                        <img src="/images/icons/flags/big/64/ru.png"></a>
+
+                    <a href="/browse.php?a=Argentinian">
+                        <img src="/images/icons/flags/big/64/ar.png"></a>
+
+                    <a href="/browse.php?a=Spanish">
+                        <img src="/images/icons/flags/big/64/es.png"></a>
+
+                    <a href="/browse.php?a=Slovakian">
+                        <img src="/images/icons/flags/big/64/sk.png"></a>
+
+                    <a href="/browse.php?a=Thai">
+                        <img src="/images/icons/flags/big/64/th.png"></a>
+
+                    <a href="/browse.php?a=Saudi Arabian">
+                        <img src="/images/icons/flags/big/64/sa.png"></a>
+
+                    <a href="/browse.php?a=Vietnamese">
+                        <img src="/images/icons/flags/big/64/vn.png"></a>
+
+                    <a href="/browse.php?a=Turkish">
+                        <img src="/images/icons/flags/big/64/tr.png"></a>
+
+                    <a href="/browse.php?a=Syrian">
+                        <img src="/images/icons/flags/big/64/sy.png"></a>
+
+                    <a href="/browse.php?a=Algerian">
+                        <img src="/images/icons/flags/big/64/dz.png"></a>
+
+                    <a href="/browse.php?a=Tunisian">
+                        <img src="/images/icons/flags/big/64/tn.png"></a>
+
+                    <a href="/browse.php?a=Polish">
+                        <img src="/images/icons/flags/big/64/pl.png"></a>
+
+                    <a href="/browse.php?a=Filipino">
+                        <img src="/images/icons/flags/big/64/ph.png"></a>
+
+                    <br><br>
+                    <h3> Browse By Name<br></h3>
+                    <h2>
+                        <a href="/browse.php?b=a">A</a> / <a href="/browse.php?b=b">B</a> / <a
+                            href="/browse.php?b=c">C</a>
+                        / <a href="/browse.php?b=d">D</a> / <a href="/browse.php?b=e">E</a> / <a
+                            href="/browse.php?b=f">F</a> / <a href="/browse.php?b=g">G</a> / <a
+                            href="/browse.php?b=h">H</a>
+                        / <a href="/browse.php?b=i">I</a> / <a href="/browse.php?b=j">J</a> / <a
+                            href="/browse.php?b=k">K</a> / <a href="/browse.php?b=l">L</a> / <a
+                            href="/browse.php?b=m">M</a>
+                        / <a href="/browse.php?b=n">N</a> / <a href="/browse.php?b=o">O</a> / <a
+                            href="/browse.php?b=p">P</a> / <a href="/browse.php?b=q">Q</a> / <a
+                            href="/browse.php?b=r">R</a>
+                        / <a href="/browse.php?b=s">S</a> / <a href="/browse.php?b=t">T</a> / <a
+                            href="/browse.php?b=u">U</a> / <a href="/browse.php?b=v">V</a> / <a
+                            href="/browse.php?b=w">W</a>
+                        / <a href="/browse.php?b=x">X</a> / <a href="/browse.php?b=y">Y</a> / <a
+                            href="/browse.php?b=z">Z</a>
+                    </h2>
+                </div>
+            </div><!--/.container-->
+        </div>
+    </section>
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    © 2023 TheMealDB <br>Proudly built in the UK <img src="/images/icons/flags/big/16/gb.png">
+                </div>
+                <div class="col-md-6 d-flex justify-content-center flex-wrap">
+                        <a href="https://www.thecocktaildb.com" target="_blank"><img src="../images/logo-tcdb.png"
+                                alt="logo"></a>
+                        <a href="http://www.theaudiodb.com" target="_blank"><img src="../images/logo-tadb.png"
+                                alt="logo"></a>
+                        <a href="https://www.thesportsdb.com" target="_blank"><img src="../images/logo-tsdb.png"
+                                alt="logo"></a>
+                </div>
+                <div class="col-md-3 d-flex justify-content-end">
+                    <ul class="pull-right">
+                        <li><a href="./about.php">About</a></li>
+                        <li><a href="./faq.php">Faq</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
